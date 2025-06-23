@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     contract = new web3.eth.Contract(ArtGalleryABI, contractAddress);
     window.contract = contract;
 
-    await loadUserGallery(); // ✅ Load gallery on page load
+    await loadUserGallery(); 
   } else {
     alert('Please install MetaMask to use this DApp.');
   }
@@ -135,7 +135,7 @@ async function uploadAndMint() {
 
     alert('🎉 NFT minted successfully!');
     resetFileInput();
-    await loadUserGallery(); // ✅ Refresh gallery after mint
+    await loadUserGallery(); 
   } catch (err) {
     console.error('Minting failed:', err);
     alert('Minting failed. Check console for details.');
@@ -187,9 +187,5 @@ async function loadUserGallery() {
     gallery.innerHTML = `<p class="error">Error loading gallery.</p>`;
   }
 }
-
-
-
-
 
 window.uploadAndMint = uploadAndMint;

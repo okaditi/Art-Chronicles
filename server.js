@@ -54,7 +54,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
     const hash = response.data.IpfsHash;
     res.json({ IpfsHash: hash });
   } catch (err) {
-    console.error('❌ Pinata upload failed:', err?.response?.data || err.message || err);
+    console.error('Pinata upload failed:', err?.response?.data || err.message || err);
     res.status(500).send({
       error: 'IPFS upload failed',
       details: err?.response?.data || err.message || err
