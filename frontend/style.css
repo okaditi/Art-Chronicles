@@ -865,101 +865,80 @@ footer {
   margin-top: 1rem;
 }
 
+
+
+
 .gallery-section {
-  padding: 3rem 2rem;
-  max-width: 1200px;
+  padding: 4rem 2rem;
+  max-width: 1280px;
   margin: 0 auto;
-  background: var(--darker);
+  background-color: var(--darker);
   border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .gallery-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 2rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
-  scrollbar-width: thin;
-  scrollbar-color: var(--gray) transparent;
-}
-
-.gallery-grid::-webkit-scrollbar {
-  height: 8px;
-}
-
-.gallery-grid::-webkit-scrollbar-thumb {
-  background-color: var(--gray);
-  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
 }
 
 .gallery-item {
-  flex: 0 0 auto;
-  width: 280px;
-  scroll-snap-align: start;
-}
-
-.gallery-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-card:hover {
-  transform: translateY(-5px);
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
 }
 
-.gallery-card img,
-.gallery-card video {
+.gallery-item img,
+.gallery-item video {
   width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
   max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
   background: #000;
 }
 
 .gallery-info {
   margin-top: 1rem;
-  color: var(--light);
 }
 
 .gallery-info h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.4rem;
-  font-weight: 600;
   color: var(--light);
 }
 
 .gallery-info p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--gray);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
   line-height: 1.4;
 }
 
 .gallery-meta {
   font-size: 0.8rem;
   color: var(--gray);
-  margin-top: 0.6rem;
 }
 
 .gallery-meta div {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .gallery-meta a {
   color: var(--secondary);
   text-decoration: none;
   word-break: break-all;
-  transition: color 0.2s;
+  transition: color 0.3s;
 }
 
 .gallery-meta a:hover {
